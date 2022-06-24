@@ -23,10 +23,29 @@ private slots:
 
     void on_pushButton_bkc_clicked();
 
+    void on_pushButton_space_clicked();
+
+    void on_pushButton_enter_clicked();
+
+    void on_pushButton_caps_clicked();
+
+    void on_pushButton_exit_clicked();
+
+    void on_pushButton_capoff_clicked();
+
 private:
     Ui::MainWindow *ui;
-    QString pass;
-    QString sPass;
+    QString new_val;
+    QString new_bkv;
+    //QString pass;
+    //QString sPass;
+    bool check_1=false;
+    bool check_2=false;
+    bool caps=false;
+
+protected:
+    bool eventFilter(QObject *obj, QEvent *ev);
+
 };
 
 #endif // MAINWINDOW_H
